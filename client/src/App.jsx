@@ -612,7 +612,6 @@ export default function App() {
               </form>
 
               {surpriseError && <p className="mt-4 text-xs font-bold text-[#ba1a1a] animate-pulse">{surpriseError}</p>}
-              <p className="mt-3 text-[11px] text-[#8e6f74]">Hint: Try key <span className="font-bold text-[#b0004a]">"2128"</span> or <span className="font-bold text-[#b0004a]">"love"</span></p>
             </div>
           </div>
         ) : (

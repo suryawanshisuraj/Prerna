@@ -164,7 +164,6 @@ const journalData = {
   ],
   surprise: {
     validKeys: ["2128", "love", "1012", "10-12", "prerna", "suraj"],
-    hint: "Hint: Try '2128' or 'love'",
     letter: {
       date: "November 19th, 2025",
       greeting: "My Dearest Prerna,",

@@ -74,10 +74,6 @@ export default function Surprise() {
                 {errorMsg}
               </p>
             )}
-
-            <p className="mt-3 text-[11px] text-[#8e6f74]">
-              Hint: Try key <span className="font-bold text-[#b0004a]">"love"</span> or <span className="font-bold text-[#b0004a]">"1012"</span>
-            </p>
           </div>
         </div>
       ) : (
