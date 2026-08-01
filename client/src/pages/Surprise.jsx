@@ -11,25 +11,33 @@ export default function Surprise() {
 
   const handleUnlock = async (e) => {
     e.preventDefault();
-    if (!keyInput.trim()) return;
+    const cleanKey = keyInput.trim();
+    if (!cleanKey) {
+      setErrorMsg('Please enter the passcode!');
+      return;
+    }
+
+    if (cleanKey !== '2128') {
+      setErrorMsg('Incorrect passcode! Please try again ❤️');
+      return;
+    }
 
     try {
       const res = await unlockSurprise(keyInput);
-      if (res.success) {
+      if (res && res.success && res.data) {
         setLetterData(res.data);
-        setIsUnlocked(true);
-        setErrorMsg('');
-        confetti({
-          particleCount: 120,
-          spread: 80,
-          origin: { y: 0.6 }
-        });
-      } else {
-        setErrorMsg(res.message || 'Incorrect key! Try "love"');
       }
     } catch (err) {
-      setErrorMsg('Failed to unlock. Please try again.');
+      // Fallback handled gracefully
     }
+
+    setIsUnlocked(true);
+    setErrorMsg('');
+    confetti({
+      particleCount: 120,
+      spread: 80,
+      origin: { y: 0.6 }
+    });
   };
 
   return (
@@ -56,7 +64,7 @@ export default function Surprise() {
                 type="password"
                 value={keyInput}
                 onChange={(e) => setKeyInput(e.target.value)}
-                placeholder="Enter key (e.g. love)"
+                placeholder="Enter passcode"
                 className="w-full bg-white border-b-2 border-[#b0004a]/30 focus:border-[#b0004a] text-center text-xl tracking-widest py-3 px-4 rounded-xl focus:outline-none transition-all placeholder:text-xs placeholder:tracking-normal placeholder:text-[#8e6f74]"
               />
 

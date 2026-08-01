@@ -185,8 +185,14 @@ export default function App() {
   // Surprise Unlock Handler
   const handleUnlockSurprise = async (e) => {
     e.preventDefault();
-    if (!passcode.trim()) {
-      setSurpriseError('Please enter a passcode!');
+    const cleanKey = passcode.trim();
+    if (!cleanKey) {
+      setSurpriseError('Please enter the passcode!');
+      return;
+    }
+
+    if (cleanKey !== '2128') {
+      setSurpriseError('Incorrect passcode! Please try again ❤️');
       return;
     }
 

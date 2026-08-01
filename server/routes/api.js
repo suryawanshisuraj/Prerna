@@ -56,15 +56,23 @@ router.post('/surprise/unlock', (req, res) => {
     return res.status(400).json({ success: false, message: "Please enter a passcode!" });
   }
 
-  const dynamicLetter = {
-    ...journalData.surprise.letter,
-    date: getFormattedCurrentDate()
-  };
+  const cleanKey = String(key).trim();
+  if (cleanKey === "2128") {
+    const dynamicLetter = {
+      ...journalData.surprise.letter,
+      date: getFormattedCurrentDate()
+    };
 
-  res.json({
-    success: true,
-    data: dynamicLetter
-  });
+    return res.json({
+      success: true,
+      data: dynamicLetter
+    });
+  } else {
+    return res.status(401).json({
+      success: false,
+      message: "Incorrect passcode! Please try again ❤️"
+    });
+  }
 });
 
 module.exports = router;
