@@ -168,9 +168,9 @@ const journalData = {
       date: "November 19th, 2025",
       greeting: "My Dearest Prerna,",
       paragraphs: [
-        "I've been keeping this here for the moment you found it. Every day with you feels like a new chapter of a story I never want to end. From the day we sat together enjoying dosa at Marine Drive, with the sea breeze, the sound of the waves, and the lights stretching across Girgaon Chowpatty, I knew those moments would stay with me forever.",
+        "I've been keeping this here for the moment you found it. Every day with you feels like a new chapter of a story I never want to end. From the day we sat together enjoying pav bhaji at Marine Drive, with the sea breeze, the sound of the waves, and the lights stretching across Girgaon Chowpatty, I knew those moments would stay with me forever.",
         "That simple date became one of my favorite memories—not because of the place or the food, but because I was there with you. Every laugh, every conversation, and every quiet moment beside the ocean made my heart feel completely at home.",
-        "You are my greatest adventure, my favorite person to make memories with, and the most beautiful part of my life. No matter where we go next, that dosa date at Marine Drive will always be one of the sweetest chapters of our story."
+        "You are my greatest adventure, my favorite person to make memories with, and the most beautiful part of my life. No matter where we go next, that pav bhaji date at Marine Drive will always be one of the sweetest chapters of our story."
       ],
       closing: "Forever yours,",
       signature: "— Suraj",
